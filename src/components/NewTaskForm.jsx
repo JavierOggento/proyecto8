@@ -2,6 +2,8 @@ import { useState } from "react";
 
 import { useKanban } from "../context/useKanban";
 
+import "../Styles/TaskCard.css"
+
 export default function AddTask(){
     const [title, setTitle] = useState("");
     const { addTask } = useKanban();
@@ -18,9 +20,9 @@ export default function AddTask(){
         <input 
         value={title} 
         onChange={(e) => setTitle(e.target.value)} 
-        placeholder="Nueva tarea"
+        placeholder="New Task"
         />
-        <button type="submit">Agregar</button> 
+        <button type="submit">Add</button> 
         </form>
     );
 }

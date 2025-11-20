@@ -1,5 +1,6 @@
-html,body {
-  background: linear-gradient(in oklab,#555550, #d8cb52);
+html,
+body {
+  background: linear-gradient(in oklab, #555550, #00FFFF);
   color: white;
   width: auto;
   height: 100%;

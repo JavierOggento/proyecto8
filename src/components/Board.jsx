@@ -16,16 +16,16 @@ const Board = ({ filterTerm }) => {
 
     return (
         <div className="board-container">
-            <div className="request">
-                <p>Añadir tarea</p>
-                <NewTaskForm />
-            </div>
             <div className="board">
                 <BoardColumn title="Todo" tasks={filterTasks(columns.todo)} columnKey="todo" />
 
                 <BoardColumn title="Doing" tasks={filterTasks(columns.doing)} columnKey="doing" />
 
                 <BoardColumn title="Done" tasks={filterTasks(columns.done)} columnKey="done" />
+            </div>
+            <div className="request">
+                <p>Add Task</p>
+                <NewTaskForm />
             </div>
         </div>
     )

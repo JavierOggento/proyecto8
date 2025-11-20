@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  margin-top: 20px;
 }
 .board-container {
   padding: 20px;
@@ -20,6 +19,7 @@
   gap: 25px;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  margin-top: 10px;
 
 }
 .request p{

@@ -4,30 +4,33 @@ import "../Styles/TaskCard.css"
 export default function TaskCard({ task, column }) {
     const { moveTask } = useKanban();
 
-
-    const moveLeft = () => {
-        if (column === "doing") return moveTask(task.id, "todo")
-        if (column === "done") return moveTask(task.id, "doing")
-    }
-
-    const moveRight = () => {
-        if (column === "todo") return moveTask(task.id, "doing")
-        if (column === "doing") return moveTask(task.id, "done")
-    }
+    const moveTo = (target) => {
+        moveTask(task.id, target);
+    };
 
     return (
-        <div className="task-card">
+        <div className={`task-card ${column}`}>
             <p className="title">{task.title}</p>
+
             <div className="task-action">
                 {column !== "todo" && (
-                    <button onClick={moveLeft} className="botones">←</button>
+                    <button className="botones" onClick={() => moveTo("todo")}>
+                        Move to To do
+                    </button>
+                )}
+
+                {column !== "doing" && (
+                    <button className="botones" onClick={() => moveTo("doing")}>
+                        Move to In-Progress
+                    </button>
                 )}
 
                 {column !== "done" && (
-                    <button onClick={moveRight} className="botones">→</button>
+                    <button className="botones" onClick={() => moveTo("done")}>
+                        Move to Done
+                    </button>
                 )}
             </div>
-
         </div>
-    )
+    );
 }

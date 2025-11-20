@@ -3,12 +3,39 @@
   margin: 5px 0;
   padding: 10px;
   border-radius: 5px;
-  width: 90%;
+  width: 95%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
 }
+
+.title{
+  font-size: 20px;
+}
+
 .task-actions button {
   margin: 0 2px;
   cursor: pointer;
+}
+
+.task-card.todo {
+  background-color: #ffdede;
+}
+
+.task-card.doing {
+  background-color: #fff5cc;
+}
+
+.task-card.done {
+  background-color: #d7ffd7;
+}
+
+.botones {
+  margin: 5px;
+  border-radius: 10px;
+  border: 0px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }

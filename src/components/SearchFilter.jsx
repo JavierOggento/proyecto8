@@ -10,8 +10,8 @@ export default function SearchFilter ({ setSearch }) {
 
     return(
         <div className="search-filter">
-            <input type="text" ref={inputRef} placeholder="Buscar Tareas"/>
-            <button onClick={handleChange}>Filtrar</button>
+            <input type="text" ref={inputRef} placeholder="Find a task" className="inputFilter"/>
+            <button onClick={handleChange} className="button1">Filter</button>
         </div>
     )
 }

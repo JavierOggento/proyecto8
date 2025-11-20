@@ -16,7 +16,7 @@ export default function BoardColumn({ title, tasks, columnKey }) {
                         />
                     ))
                 ) : (
-                    <p className="empty">No hay tareas</p>
+                    <p className="empty">No Taks</p>
                 )
                 }
         </div>
